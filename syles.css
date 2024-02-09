@@ -1,0 +1,241 @@
+
+/* BASE */
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* LAYOUT */
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.flex--around{
+    justify-content: space-around;
+}
+
+.flex--between{
+    justify-content: space-between;
+}
+
+.grid{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* BODY */
+
+body{
+    background-color:hsl(226, 43%, 10%) ;
+    padding: 50px 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* HEADER */
+
+.headerBack{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.headerProfile{
+    background-color:hsl(235, 76%, 61%);
+    border-radius: 15px;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.568);
+    justify-content: center;
+}
+
+.headerText{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.name{
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: white;
+}
+
+.headerImgContainer{
+    overflow: hidden;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 20px;
+}
+
+.headerImgContainer img{
+    width: 100%;
+}
+
+.navBar{
+    padding: 20px 0;
+    color: hsl(236, 100%, 87%);
+    font-size: 1.1rem;
+}
+
+/* ARTICLES */
+
+.articleContainer{
+    border-radius: 15px;
+    margin: 20px 0;
+    padding-top: 35px;
+    color: white;
+    width: 400px;
+}
+
+.articleTimeTable{
+    background-color: hsl(235, 46%, 20%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    
+}
+
+.articleTitle{
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.times{
+    padding: 10px 0 0 0;
+}
+.time{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.previusTime{
+    font-size: 0.9rem;
+    color: hsl(236, 100%, 87%);
+}
+
+/* INDIVIDUAL BACKGROUNDS */
+    .work{
+        background-image: url("./images/icon-work.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(15, 100%, 70%);
+    }
+
+
+    .play{
+        background-image: url("./images/icon-play.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(195, 74%, 62%);
+    }
+
+    .study{
+        background-image: url("./images/icon-study.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(348, 100%, 68%);
+    }
+
+    .excercise{
+        background-image: url("./images/icon-exercise.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(145, 58%, 55%);
+    }
+
+    .social{
+        background-image: url("./images/icon-social.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(264, 64%, 52%);
+    }
+
+    .selfCare{
+        background-image: url("./images/icon-self-care.svg");
+        background-repeat: no-repeat;
+        background-position: 90% -30%;
+        background-color: hsl(43, 84%, 65%);
+    }
+
+/* STATE */
+
+.navBar ul li:hover,.navBar ul li:focus{
+    color: white;
+    cursor: pointer;
+}
+
+.articleTimeTable:hover, .articleTimeTable:focus{
+    background-color: rgb(49, 53, 107);
+    cursor: pointer;
+}
+
+.ellipsis:hover, .ellipsis:focus{
+    cursor: pointer;
+}
+
+@media(min-width: 700px){
+
+    .bodyResponsive{
+        width: 900px;
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 20px;
+    }
+
+    .flex--stop{
+        display: block;
+    }
+
+    .headerProfile{
+        padding: 20px 30px 50px 30px;
+    }
+
+    .name{
+        font-size: 2.5rem;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+
+    }
+
+    .articleContainer{
+        margin: 0;
+        width:100%;
+
+    }
+
+    .headerBack{
+        width:250px;
+        width:100%;
+    }
+    .headerImgContainer{
+        margin-bottom: 20px;
+    }
+
+    .navBar ul li{
+        padding: 10px 30px;
+    }
+
+    .previusTime{
+        padding-top: 20px;
+    }
+
+    .time{
+        font-size: 2.8rem;
+    }
+
+}
